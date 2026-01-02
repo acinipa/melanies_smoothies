@@ -24,6 +24,9 @@ ingredients_list = st.multiselect(
     ,max_selections=5
 )
 
+cnx = st.connection("snowflake")
+session = cnx.session()
+
 if ingredients_list:
     ingredients_string = ''
 
